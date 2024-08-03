@@ -3246,9 +3246,102 @@ console.log(sortWordFromAtoB(string1234))
 //#endregion
 
 
+//#region // Знайти всі елементи масиву, що містять задану підстроку, та об'єднати їх у новий масив, після чого вивести у консоль лог повідомлення "Масив елементів, що містять підстроку substring: ..." .Результат повинен бути розділений комами та пробілами.(використати indexOf)
+
+// const stringArray = ['JavaScript', 'HTML', 'CSS', 'React'];
+// const substring = 'S';
+// // 1. поганий варіант
+// function findLetter (arr, letter) {
+// const insideArr = [];
+
+// for(const item of arr){
+// 	item.split('');
+// 	for (let i = 0; i < item.length; i+=1){
+// 		 if (item[i].includes(letter)){
+// 			if(insideArr.includes(item)){
+// 				continue;
+// 			}
+// 			insideArr.push(item)
+// 		 }
+// 	}
+// }
+// return insideArr
+
+// }
+// console.log(findLetter (stringArray, substring));
+
+// // 2. хороший варіант
+// function finding (arr, letter){
+// 	const insideArr = [];
+
+// 	for (const item of arr){
+// 		if (item.includes(letter)){
+// 			insideArr.push(item);
+// 		}
+// 	}
+
+// 	return insideArr
+// }
+
+// console.log(finding (stringArray, substring));
+
+// // 3. найкращий варіант
+// const setArrAfterFilter = (arr, letter) => { return arr.filter(item => item.includes(letter))};
+// console.log(setArrAfterFilter(stringArray, substring))
+
+//#endregion
+
+//#region Створіть масив об'єктів "студентів" з властивостями "ім'я", "прізвище" та "середній бал".Напишіть функцію "findTopStudent", яка буде повертати об'єкти студентів з найвищим середнім балом.
+
+// const students = [
+// 	{ name: 'Марія', surname: 'Сидорова', grade: 4 },
+//   { name: 'Андрій', surname: 'Іванов', grade: 4.5 },
+//   { name: 'Олександр', surname: 'Петров', grade: 3.9 },
+//   { name: 'Марія', surname: 'Сидорова', grade: 4.8 },
+//   { name: 'Ірина', surname: 'Федорова', grade: 4.2 },
+//   { name: 'Марія', surname: 'Сидорова', grade: 4.8 },
+//   { name: 'Марія', surname: 'Сидорова', grade: 4.8 },
+// ];
+
+// function findTopStudent(studentsInside){
+// let total = 0;
+// const arr = [];
+
+// //знаходимо максимальний бал
+// const maxArr = [];
+// for (let i = 0; i < studentsInside.length; i+=1){
+// 	maxArr.push(studentsInside[i].grade)
+// }
+// const max = Math.max(...maxArr);
+
+
+// // Перебираємо масив об'єктів
+// for(const student of studentsInside){
+// 	if (student.grade >= total){
+// 		total = student.grade
+// 		if (student.grade >= max){
+// 			arr.push(student)
+// 		}
+// 	}
+// }
+
+// return arr
+// }
+
+// console.log(findTopStudent(students));
 
 
 
+// function findTopStudents1(studentsInside) {
+// 	const sortedStudents = studentsInside.sort((a, b) => b.grade - a.grade);
+// 	const topGrade = sortedStudents[0].grade;
+// 	const topStudents = sortedStudents.filter(student => student.grade === topGrade);
+// 	return topStudents;
+//   }
+  
+//   console.log(findTopStudents1(students));
+
+//#endregion
 
 
 

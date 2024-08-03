@@ -67,3 +67,18 @@
 
 // //Подсчитал цену
 // console.log(cart.countingTotalPrice())
+
+
+function getSlice(array, value) {
+	const index = array.indexOf(value);
+	if (index !== -1) {
+	  return array.slice(0, index);
+	} else {
+	  return [];
+	}
+  }
+  console.log(getSlice(["Mango", "Poly", "Ajax"], "Poly"))
+  getSlice(["Mango", "Poly", "Ajax"], "Ajax")
+  getSlice(["Mango", "Poly", "Ajax"], "Mango")
+  getSlice(["Mango", "Poly", "Ajax"], "Jacob")
+  getSlice(["Mango", "Poly", "Ajax"], "Casey")
