@@ -61,12 +61,12 @@
 
 //TODO #region ПЕРЕБОР ОБЪЕКТА В МАССИВЕ с помощью методов map, sort, reduce, filter
 ////-----------------------------------------------------------------------------------------------
-let friends = [
-  { id: 1, name: "Vova", age: 20, budget: 2400, isComplete: true },
-  { id: 2, name: "Sara", age: 22, budget: 3500, isComplete: false },
-  { id: 3, name: "Mike", age: 30, budget: 300, isComplete: true },
-  { id: 4, name: "Bob", age: 16, budget: 200, isComplete: false },
-];
+// let friends = [
+//   { id: 1, name: "Vova", age: 20, budget: 2400, isComplete: true },
+//   { id: 2, name: "Sara", age: 22, budget: 3500, isComplete: false },
+//   { id: 3, name: "Mike", age: 30, budget: 300, isComplete: true },
+//   { id: 4, name: "Bob", age: 16, budget: 200, isComplete: false },
+// ];
 //!-----------------------------------------------------------------------------------------------
 // function disconds (item, diskond){
 // return item.map( itm => ({...itm, budget: itm.budget - (itm.budget * diskond)}))}
@@ -74,12 +74,12 @@ let friends = [
 //!-----------------------------------------------------------------------------------------------
 //!-----------------------------------------------------------------------------------------------
 //* двойной фильтер
-function filt(items, age, value) {
-  return items
-    .filter(({ age: yers, budget }) => yers > age && value < budget)
-    .filter(({ isComplete: isCompl }) => isCompl);
-}
-console.table(filt(friends, 18, 1000));
+// function filt(items, age, value) {
+//   return items
+//     .filter(({ age: yers, budget }) => yers > age && value < budget)
+//     .filter(({ isComplete: isCompl }) => isCompl);
+// }
+// console.table(filt(friends, 18, 1000));
 //!-----------------------------------------------------------------------------------------------
 //!-----------------------------------------------------------------------------------------------
 //* сортировка
@@ -287,11 +287,4 @@ console.table(filt(friends, 18, 1000));
 // const a = [1,1,2,3,4,5, ...b]
 //!-----------------------------------------------------------------------------------------------
 
-//todo import
-//!-----------------------------------------------------------------------------------------------
-import {sortWordFromAtoB as funkSortWordFromAtoB, arrNumToArrOfDivisors, getCommonDigits, takeStrToObj} from './tasks';
 
-console.log(funkSortWordFromAtoB('word'));
-console.log(arrNumToArrOfDivisors([56,44,22,66,3,65,22]));
-console.log(getCommonDigits(2233, 1222));
-console.log(takeStrToObj('bksdbalsLXNbccbdhkahvckahsvcaskhvckacblcLVLcv'));//!-----------------------------------------------------------------------------------------------

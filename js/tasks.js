@@ -14,22 +14,22 @@
 
 // поиск выбраного клиентом акаунта и открытие его доступа
 // switch (a.toLowerCase()) {
-	//доступ первого уровня
-	// case lvl1:
-	// 	cost = "is-open-1" //тут функция добавления "toggle" к страничке класов которые открывают доступ 
-	// 	asses = "Вам открыт доступ Free уровня"
-	// break;
-	//доступ второго уровня
-	// case lvl2:
-	// 	cost = "is-open-2" //тут функция добавления "toggle" к страничке класов которые открывают доступ 
-	// 	asses = "Вам открыт доступ pro уровня"
-	// break;
-	//доступ третьего уровня
+//доступ первого уровня
+// case lvl1:
+// 	cost = "is-open-1" //тут функция добавления "toggle" к страничке класов которые открывают доступ
+// 	asses = "Вам открыт доступ Free уровня"
+// break;
+//доступ второго уровня
+// case lvl2:
+// 	cost = "is-open-2" //тут функция добавления "toggle" к страничке класов которые открывают доступ
+// 	asses = "Вам открыт доступ pro уровня"
+// break;
+//доступ третьего уровня
 // 	case lvl3:
-// 		cost = "is-open-3" //тут функция добавления "toggle" к страничке класов которые открывают доступ 
+// 		cost = "is-open-3" //тут функция добавления "toggle" к страничке класов которые открывают доступ
 // 		asses = "Вам открыт доступ premium уровня"
 // 	default :
-		
+
 // 	break;
 // }
 
@@ -138,7 +138,7 @@
 // 	case 2:
 // 		message = console.log("вы сможете забрать товар завтра после 13:00");
 // 		break;
-	
+
 // 	case 3:
 // 	message = console.log("вы сможете забрать товар завтра после 14:00");
 // 	break;
@@ -168,7 +168,7 @@
 // 	if (name === login){
 // 		console.log(`Пользователь ${login} найден`);
 // 		break;
-// 	} 
+// 	}
 // 		console.log(`Пользователь ${login} не найден`);
 // }
 
@@ -192,15 +192,15 @@
 // for (let i = 0; i<string.length; i+=1){
 
 //1
-	// if (string[i] === string[i].toUpperCase()){
-	// 	console.log("эта буква в верхнем регистре " + string[i])
-	// 	invertedString = invertedString + string[i].toLowerCase()
-	// } else {
-	// 	invertedString = invertedString + string[i].toUpperCase()
-	// }
+// if (string[i] === string[i].toUpperCase()){
+// 	console.log("эта буква в верхнем регистре " + string[i])
+// 	invertedString = invertedString + string[i].toLowerCase()
+// } else {
+// 	invertedString = invertedString + string[i].toUpperCase()
+// }
 
 //2
-	// invertedString = string[i] === string[i].toUpperCase() ? invertedString += string[i].toLowerCase() : invertedString += string[i].toUpperCase();
+// invertedString = string[i] === string[i].toUpperCase() ? invertedString += string[i].toLowerCase() : invertedString += string[i].toUpperCase();
 // }
 
 // console.log(invertedString)
@@ -227,7 +227,6 @@
 //#endregion
 //!-----------------------------------------------------------------------------------------------
 
-
 //todo Уровень 1.1
 
 // #region 🏁🏁🏁🏁🏁🏁🏁🏁🏁🏁🏁🏁🏁 Дано число. Проверьте, отрицательное оно или нет. Выведите об этом информацию в консоль.
@@ -253,16 +252,14 @@
 // const x = number(-1)
 // console.log (x)
 
-
-
-// #endregion about 
+// #endregion about
 
 // #region 🏁🏁🏁🏁🏁🏁🏁🏁🏁🏁🏁🏁🏁Дана строка. Выведите в консоль длину этой строки.
 
 // const text = "string";
 // console.log(text.length);
 
-// #endregion 
+// #endregion
 
 // #region 🏁🏁🏁🏁🏁🏁🏁🏁🏁🏁🏁🏁🏁Дана строка. Выведите в консоль последний символ строки.
 
@@ -296,7 +293,7 @@
 
 // #endregion
 
-// #region 🏁🏁🏁🏁🏁🏁🏁🏁🏁🏁🏁🏁🏁Дано слово. Получите его последнюю букву. Если слово заканчивается на мягкий знак, то получите предпоследнюю букву. 
+// #region 🏁🏁🏁🏁🏁🏁🏁🏁🏁🏁🏁🏁🏁Дано слово. Получите его последнюю букву. Если слово заканчивается на мягкий знак, то получите предпоследнюю букву.
 
 // let word = "ветвь"
 // word = word.trim().toLowerCase()
@@ -404,7 +401,6 @@
 // 	console.log(i)
 // }
 
-
 // function number (min, max) {
 // for (let i = min; i<=max; i+=1) {
 // 	console.log(i);
@@ -413,7 +409,7 @@
 
 // number(1, 13)
 
-//#endregion 
+//#endregion
 
 //#region 🏁🏁🏁🏁🏁🏁🏁🏁🏁🏁🏁🏁🏁Выведите в консоль все целые числа от -100 до 0.
 
@@ -433,9 +429,8 @@
 
 //#region 🏁🏁🏁🏁🏁🏁🏁🏁🏁🏁🏁🏁🏁Выведите в консоль все четные числа из промежутка от 1 до 100.
 
-
 // for (let i = 1; i<=100; i+=1) {
-	
+
 // 	if (i % 2 === 0){
 // 		console.log(`номер ${i}`)
 // 	}
@@ -510,11 +505,9 @@
 
 // console.log(string.length )
 
-
 // for (let i = string.length - 1; i>=0; i-=1){
 // 	console.log(string[i]);
 // }
-
 
 // let string1 = "hello world";
 
@@ -543,7 +536,7 @@
 // 		sum += Math.pow(mas[i], 2)
 // 	}
 // 	return sum;
-	
+
 // }
 
 // console.log(array([2,2,2,2]))
@@ -619,7 +612,6 @@
 
 //#region 🏁🏁🏁🏁🏁🏁🏁🏁🏁🏁🏁🏁🏁Дано некоторое число: 12345 Получите массив цифр этого числа. *
 
-
 // const number = 12345;
 
 // const nemberMas = Array.from(String(number), Number);
@@ -636,12 +628,11 @@
 // const numberArrey = Array.from(String(number), Number);
 
 // for (let i = numberArrey.length - 1; i >= 0; i-=1){
-	
+
 // num += String(numberArrey[i])
 // }
 
 // console.log(Number(num))
-
 
 ///////////// let numResult = Array.from(String(num), Number);
 
@@ -706,7 +697,6 @@
 
 // const mas = [1.456, 2.125, 3.32, 4.1, 5.34];
 
-
 // for (let i = 0; i < mas.length; i+=1){
 // mas[i] = Number(mas[i].toFixed(1))
 // }
@@ -728,7 +718,7 @@
 
 // 	if (mas[i].slice(0, 7) === http){
 // 		mas2.push(mas[i])
-// 	} 
+// 	}
 // }
 // console.log(mas2)
 
@@ -847,7 +837,6 @@
 
 // const zero = 0;
 
-
 // for (let i = 0; i < finding.length; i+=1){
 
 // 	if (Number(finding[i]) !== zero){
@@ -856,7 +845,7 @@
 // 		let index = finding.indexOf(finding[i]);
 // 		return console.log(`В данной строке есть 0 и он на ${index} позиции`)
 // 	}
-	
+
 // }
 
 // }
@@ -866,7 +855,6 @@
 //#endregion
 
 //#region 🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩Выведите в консоль все числа в промежутке от 1 до 1000, сумма первой и второй цифры которых равна пяти.
-
 
 // function allNumberForFive (cauntingFiveMin, cauntingFiveMax) {
 
@@ -882,7 +870,7 @@
 // 			let result = Number(testMas.join(''))
 // 			console.log(result)
 // 		}
-		
+
 // 	}
 
 // }
@@ -896,7 +884,6 @@
 //#region 🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩Дан массив. Удалите из него элементы с заданным значением.
 
 // const mas = [4,6,12,44,1,6,6,3]
-
 
 // function delNum (fromMas, del) {
 // const newMas = [];
@@ -929,7 +916,6 @@
 // return total;
 // }
 
-
 // const resultHalfSum = halfSumMas(mas);
 
 // console.log(resultHalfSum)
@@ -945,7 +931,7 @@
 // function cauntingMinusFromMas (cauntingMas) {
 
 // 	let total = 0;
-	
+
 // 	for (let i = 0; i < cauntingMas.length; i+=1) {
 // 		if (cauntingMas[i] < 0) {
 // 			total += 1
@@ -953,7 +939,6 @@
 // 	}
 // return total;
 // }
-
 
 // const cauntingMinus = cauntingMinusFromMas(mas);
 
@@ -1102,8 +1087,6 @@
 
 // console.log(sum(mas))
 
-
-
 //#endregion
 
 //#region 🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩Дана дата в следующем формате: '2025-12-31' Преобразуйте эту дату в следующий объект: { year: '2025', month: '12', day: '31',}
@@ -1131,7 +1114,7 @@
 // function findingFirstNumber (testString) {
 // 	let result = 0;
 // 	for (const item of testString) {
-		
+
 // 		if (Number(item)) {
 // 			result = Number(item)
 // 			return result;
@@ -1213,7 +1196,7 @@
 // let string = 'aaa bbb ccc';
 
 // function firstLetterUpper (testString) {
-	
+
 // 	const firstLetter = testString[0].toUpperCase()
 // 	let nextLetter = '';
 
@@ -1221,8 +1204,7 @@
 // 		if (testString[i] == false) {
 
 // 			nextLetter += ' ' + testString[i+1].toUpperCase()
-			
-			
+
 // 		 } else if ( testString[i] === testString[i].toLowerCase()){
 
 // 			nextLetter += testString[i].toLowerCase()
@@ -1274,7 +1256,6 @@
 // 		}
 // 	}
 
-
 // return newMas.join('')
 // }
 
@@ -1315,7 +1296,7 @@
 // 	const pozishenMas = [];
 
 // 	for (let i = 0; i < testString.length; i+=1){
-		
+
 // 		if (Number(testString[i])) {
 // 				pozishenMas.push(i)
 // 		}
@@ -1347,7 +1328,6 @@
 // const masLastResult1 = [];
 // const masLastResult2 = [];
 // const masLastResult3 = [];
-
 
 // 	for (let i = masResult1.length - 1; i >= 0; i-=1) {
 // 		masLastResult1.push(masResult1[i])
@@ -1386,23 +1366,21 @@
 
 //#region 🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩Дана некоторая строка с числом: '1234567' Отделите тройки цифр пробелами, начиная с конца числа. В нашем случае должно получится следующее: '1 234 567' ***
 
-
 // const string = '1234567';
 // const stringMas = string.split('')
 
 // const spaceAfterThree = (testString) => {
- 
+
 // 	let insideString;
-	
+
 // 	for (let i = 1; i < testString.length; i+=4) {
-		
+
 // 		testString.splice(i, 0, ' ')
 // 	}
 // 	insideString = testString.join('')
 
 // 	return insideString;
 // }
-
 
 // console.log( spaceAfterThree(stringMas))
 
@@ -1447,7 +1425,6 @@
 
 //#region 🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩Дана некоторая строка: 'a bc def ghij' Переведите в верхний регистр все подстроки, в которых количество букв меньше или равно трем. В нашем случае должно получится следующее: 'A BC DEF ghij'
 
-
 // const string = 'a bc def ghij';
 
 // function mainIsMaxThree (testString) {
@@ -1481,16 +1458,15 @@
 // const numbers = 123789;
 // const masNumbers = Array.from (String(numbers), Number);
 
-
 // function onlyEvenNumbers (testMasNumbers) {
-	
+
 // 	const insideMasNumbers = [];
 // 	for (const item of testMasNumbers) {
 // 		if (item % 2 === 0) {
 // 			insideMasNumbers.push(item)
 // 		}
 // 	}
-	
+
 // 	return Number(insideMasNumbers.join(''))
 // }
 
@@ -1518,7 +1494,7 @@
 // 	} else {
 // 		return console.log(`меньше двух заглавных букв`)
 // 	}
-	
+
 // }
 // 	console.log(howMenyMainLetters(masString))
 
@@ -1533,7 +1509,7 @@
 // const insideMasString1 = [];
 // console.log(insideMasString)
 // for (let i = 0; i < insideMasString.length; i+=1) {
-	
+
 // 	if (insideMasString[i].length <= 3) {
 
 // 		insideMasString1.push(insideMasString[i])
@@ -1624,7 +1600,7 @@
 
 // console.log(maxThreeLetter(string))
 
-//#endregion 
+//#endregion
 
 //#region 🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩Дано число. Получите первую четную цифру с конца этого числа.
 
@@ -1730,7 +1706,6 @@
 // let arr1 = [1, 2, 3];
 // let arr2 = [1, 2, 3, 4, 5];
 
-
 // function theSeymMas(mas1, mas2) {
 
 // if (mas1.length > mas2.length) {
@@ -1757,7 +1732,6 @@
 
 // }
 
-
 // console.log(theSeymMas(arr1, arr2))
 
 //#endregion
@@ -1771,7 +1745,6 @@
 // 	mas1.sort((a,b)=> a - b);
 // 	mas2.sort((a,b)=> a-b);
 // 	mas3.sort((a,b)=>a-b);
-
 
 // console.log (mass)
 
@@ -1813,7 +1786,6 @@
 
 //#region 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀Дана некоторая переменная с числом:let num = 5;Сделайте строку, содержащую столько нулей, сколько указано в переменной. В нашем случае получится такая строка: '00000'
 
-
 // const num = 5;
 
 // function letMakeZero(testNum) {
@@ -1825,7 +1797,6 @@
 
 // return mas.join('')
 // }
-
 
 // console.log(letMakeZero(num))
 
@@ -1923,9 +1894,7 @@
 // 	console.log(`Не все цифры четные`)
 // }
 
-
-
-// return insidetestString 
+// return insidetestString
 // }
 
 // console.log(notEvenNumbers(num))
@@ -1945,7 +1914,6 @@
 // 	insideMas1.push(insideMas[i])
 // }
 
-
 // for (let i = insideMas.length - 1; i >= 0; i-=1){
 // 	insideMas2.push(insideMas[i])
 // }
@@ -1959,7 +1927,6 @@
 // } else {
 // 	message = 'не читается одинаково с любой стороны'
 // }
-
 
 // return console.log (message)
 // }
@@ -2135,10 +2102,8 @@
 // const numbersWithZero = numbers.filter(number => number.toString().includes('0'));
 // console.log(`Числа с цифрой 0: ${numbersWithZero}`);
 
-
 // const numbersWithOne = numbers.filter(number => number.toString().includes('1'));
 // console.log(numbersWithOne)
-
 
 // const numbersWithFIve = numbers.filter(number => number.toString().includes('5'));
 // console.log(numbersWithFIve)
@@ -2178,7 +2143,6 @@
 // console.log(string);
 
 //#endregion
-
 
 //todo Уровень 3.6
 
@@ -2254,7 +2218,6 @@
 // console.log(total)
 
 //#endregion
-
 
 //todo Уровень 3.7
 
@@ -2446,7 +2409,7 @@
 // function newView (testSt) {
 // 	const newMas = [];
 // 	newMas.push(testSt[0] = 'camel');
-// 	newMas.push(testSt[1].charAt(0).toUpperCase() + testSt[1].slice(1)) 
+// 	newMas.push(testSt[1].charAt(0).toUpperCase() + testSt[1].slice(1))
 
 // 	return newMas.join('')
 // }
@@ -2469,12 +2432,11 @@
 // 	mainMas.push(insideMas)
 // }
 
-
 // console.log(mainMas)
 
 //#endregion
 
-//todo Уровень 3.9 
+//todo Уровень 3.9
 
 //#region 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀⭐⭐⭐⭐(ДОП)❕❕❕ дана строка вывести в обьект количество букв и саму букву как ключ
 
@@ -2493,24 +2455,23 @@
 // console.table(newOb1)
 // console.table(newOb3)
 
-
 // //2
-const string1111 = 'nwoinoewcmweocmoewimcweoicmewichewfojewfowejfpapejajmciojcneicineciecniecneincie';
-const insideMas11 = string1111.split('');
+// const string1111 = 'nwoinoewcmweocmoewimcweoicmewichewfojewfowejfpapejajmciojcneicineciecniecneincie';
+// const insideMas11 = string1111.split('');
 
-function takeStrToObj(items){
-	
-return items.reduce((acc, item)=>{
-	if (acc.hasOwnProperty(item)){
-		acc[item]+=1
-	}else{
-		acc[item] = 1
-	}
-	return acc
-},{})
-}
+// function takeStrToObj(items){
 
-console.log(takeStrToObj(insideMas11))
+// return items.reduce((acc, item)=>{
+// 	if (acc.hasOwnProperty(item)){
+// 		acc[item]+=1
+// 	}else{
+// 		acc[item] = 1
+// 	}
+// 	return acc
+// },{})
+// }
+
+// console.log(takeStrToObj(insideMas11))
 
 //#endregion
 
@@ -2566,8 +2527,7 @@ console.log(takeStrToObj(insideMas11))
 
 //#endregion
 
-
-//todo Уровень 3.10 
+//todo Уровень 3.10
 
 //#region 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀Дан массив. Сделайте так, чтобы в нем каждый элемент повторился два раза.
 
@@ -2602,21 +2562,21 @@ console.log(takeStrToObj(insideMas11))
 
 //#region 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀⭐⭐⭐⭐Даны два числа. Получите массив цифр, которые есть и в одном, и во втором числе.
 
-const number1222 = 12445;
-const number2222 = 54321;
+// const number1222 = 12445;
+// const number2222 = 54321;
 
-function getCommonDigits(num1, num2) {
-    const digits1 = Array.from(String(num1), Number);
-    const digits2 = Array.from(String(num2), Number);
+// function getCommonDigits(num1, num2) {
+//     const digits1 = Array.from(String(num1), Number);
+//     const digits2 = Array.from(String(num2), Number);
 
-    const commonDigits = digits1.filter(digit => digits2.includes(digit));
+//     const commonDigits = digits1.filter(digit => digits2.includes(digit));
 
-    return commonDigits;
-}
+//     return commonDigits;
+// }
 
-const commonDigitsArray = getCommonDigits(number1222, number2222);
+// const commonDigitsArray = getCommonDigits(number1222, number2222);
 
-console.log(`Общие цифры в числах ${number1222} и ${number2222}: ${commonDigitsArray}`);
+// console.log(`Общие цифры в числах ${number1222} и ${number2222}: ${commonDigitsArray}`);
 
 //#endregion
 
@@ -2661,7 +2621,6 @@ console.log(`Общие цифры в числах ${number1222} и ${number2222
 // console.log(resMas)
 
 //#endregion
-
 
 //todo Уровень 4.1
 
@@ -2866,7 +2825,7 @@ console.log(`Общие цифры в числах ${number1222} и ${number2222
 
 // console.log(howManyDivideInNum(num))
 
-//#endregion 
+//#endregion
 
 //#region 🧨🧨🧨🧨🧨🧨🧨🧨🧨🧨🧨🧨🧨Сделайте функцию, которая параметром будет принимать число и удалять из него четные цифры.
 
@@ -2892,7 +2851,7 @@ console.log(`Общие цифры в числах ${number1222} и ${number2222
 
 // console.log(evenMas(num))
 
-//#endregion 
+//#endregion
 
 //#region 🧨🧨🧨🧨🧨🧨🧨🧨🧨🧨🧨🧨🧨Сделайте функцию, которая заполнит массив N случайными числами из заданного промежутка.
 
@@ -3006,7 +2965,32 @@ console.log(`Общие цифры в числах ${number1222} и ${number2222
 
 //todo Уровень 4.6
 
-//#region 🧨🧨🧨🧨🧨🧨🧨🧨🧨🧨🧨🧨🧨Сделайте функцию, которая параметром будет принимать дату в формате год-месяц-день, и определять, существует ли такая дата или нет.❓❓❓
+//#region 🧨🧨🧨🧨🧨🧨🧨🧨🧨🧨🧨🧨🧨Сделайте функцию, которая параметром будет принимать дату в формате год-месяц-день, и определять, существует ли такая дата или нет.
+
+// const date = "2032-12-20";
+
+// function isTryeDate(dates) {
+//   const insideDates = dates.split("-").map((item) => Number(item));
+
+//   const [yers, months, days] = insideDates;
+
+//   if (!yers || !months || !days) {
+//     return "такой даты нет";
+//   }
+
+//   // Создаем объект даты
+//   const date = new Date(yers, months - 1, days);
+
+//   // Проверяем, что компоненты даты совпадают с исходными значениями
+//   return (
+//     date.getFullYear() === yers &&
+//     date.getMonth() === months - 1 &&
+//     date.getDate() === days
+//   );
+// }
+// console.log(isTryeDate(date));
+
+//#endregion 
 
 //#region 🧨🧨🧨🧨🧨🧨🧨🧨🧨🧨🧨🧨🧨⭐⭐⭐Сделайте функцию, которая сгенерирует строку заданной длины, заполненную случайными латинскими буквами.
 
@@ -3044,55 +3028,78 @@ console.log(`Общие цифры в числах ${number1222} и ${number2222
 
 //#region 🧨🧨🧨🧨🧨🧨🧨🧨🧨🧨🧨🧨🧨⭐⭐⭐⭐Сделайте функцию, которая параметром будет принимать массив с числами и заменять каждое число на массив его делителей.
 
-const array1234 = [22, 44, 12, 2, 34, 11, 33, 15];
+// const array1234 = [22, 44, 12, 2, 34, 11, 33, 15];
 
-function arrNumToArrOfDivisors (testArr) {
+// function arrNumToArrOfDivisors (testArr) {
 
-	const result = [];
+// 	const result = [];
 
-	for (let num of testArr){
-		const insideArr = [];
+// 	for (let num of testArr){
+// 		const insideArr = [];
 
-		for(let i = 0; i <= num; i+=1){
-			if (num % i === 0){
-				insideArr.push(i)
-			}
-		}
-		result.push(insideArr)
-	}
-	return result;
-}
+// 		for(let i = 0; i <= num; i+=1){
+// 			if (num % i === 0){
+// 				insideArr.push(i)
+// 			}
+// 		}
+// 		result.push(insideArr)
+// 	}
+// 	return result;
+// }
 
-console.log(arrNumToArrOfDivisors(array1234))
+// console.log(arrNumToArrOfDivisors(array1234))
 
 //#endregion
 
-//#region 🧨🧨🧨🧨🧨🧨🧨🧨🧨🧨🧨🧨🧨Сделайте функцию, которая параметром будет принимать секунды, а возвращать количество дней, часов, минут и секунд, соответствующих этим секундам, в виде следующего объекта: ❓❓❓
+//#region 🧨🧨🧨🧨🧨🧨🧨🧨🧨🧨🧨🧨🧨⚙️⚙️⚙️⚙️Сделайте функцию, которая параметром будет принимать секунды, а возвращать количество дней, часов, минут и секунд, соответствующих этим секундам, в виде следующего объекта:
 
+// const seconds = 86400;
+
+// function convertS(s) {
+// 	const second = 1;
+// 	const minute = second * 60;
+// 	const hour = minute * 60;
+// 	const day = hour * 24;
+
+// 	const days = Math.floor(s / day);
+// 	const hours = Math.floor((s % day) / hour);
+// 	const minutes = Math.floor(((s % day) % hour) / minute);
+// 	const seconds = Math.floor((((s % day) % hour) % minute) / second);
+//   const objData = {
+// 	d: days,
+// 	h: hours,
+// 	m: minutes,
+// 	s: seconds,
+//   }
+// 	return objData
+//   }
+
+// console.log(convertS(seconds));
+//#endregion
 
 //todo Уровень 4.7
 
 //#region 🧨🧨🧨🧨🧨🧨🧨🧨🧨🧨🧨🧨🧨⭐⭐⭐⭐Сделайте функцию, которая параметром будет принимать текст со словами, а возвращать текст, в котором эти слова будут отсортированы в алфавитном порядке.
 
-const string1234 = 'hello world'
+// const string1234 = 'hello world'
 
-function sortWordFromAtoB (testString) {
-const insideArr = testString.split(' ');
-const arrForArr = [];
+// function sortWordFromAtoB (testString) {
+// const insideArr = testString.split(' ');
+// const arrForArr = [];
 
-for (let i = 0; i < insideArr.length; i+=1){
-	arrForArr.push(insideArr[i].split(''))
-}
-const arrResult = [];
-for (let i = 0; i < arrForArr.length; i+=1){
-	arrResult.push(arrForArr[i].sort((a, b) => a.localeCompare(b)))
-}
-const result = arrResult.map(item => item.join(''))
+// for (let i = 0; i < insideArr.length; i+=1){
+// 	arrForArr.push(insideArr[i].split(''))
+// }
+// const arrResult = [];
+// for (let i = 0; i < arrForArr.length; i+=1){
+// 	arrResult.push(arrForArr[i].sort((a, b) => a.localeCompare(b)))
+// }
+// const result = arrResult.map(item => item.join(''))
 
-return result.join(' ')
-}
+// return result.join(' ')
+// }
 
-console.log(sortWordFromAtoB(string1234))
+// console.log(sortWordFromAtoB(string1234))
 
 //#endregion
 
@@ -3175,7 +3182,6 @@ console.log(sortWordFromAtoB(string1234))
 
 // console.log(numbers(1, 100, callback));
 
-
 // function callback (item) {
 // 	let result = [];
 // 	for (let i = 1; i <= item; i+=1){
@@ -3190,7 +3196,6 @@ console.log(sortWordFromAtoB(string1234))
 //#endregion
 
 //#region 🧨🧨🧨🧨🧨🧨🧨🧨🧨🧨🧨🧨🧨Сделайте функцию, которая параметрами будет принимать любое количество чисел, а возвщать их сумму.
-
 
 // function sum (...arr) {
 // const mas = [...arr];
@@ -3240,12 +3245,10 @@ console.log(sortWordFromAtoB(string1234))
 // return resMas.filter((item, inx) => resMas.indexOf(item) === inx)
 // }
 
-
 // console.log(differentNum(1, 10))
 
 //#endregion
-
-
+//todo Next
 //#region // Знайти всі елементи масиву, що містять задану підстроку, та об'єднати їх у новий масив, після чого вивести у консоль лог повідомлення "Масив елементів, що містять підстроку substring: ..." .Результат повинен бути розділений комами та пробілами.(використати indexOf)
 
 // const stringArray = ['JavaScript', 'HTML', 'CSS', 'React'];
@@ -3314,7 +3317,6 @@ console.log(sortWordFromAtoB(string1234))
 // }
 // const max = Math.max(...maxArr);
 
-
 // // Перебираємо масив об'єктів
 // for(const student of studentsInside){
 // 	if (student.grade >= total){
@@ -3330,19 +3332,133 @@ console.log(sortWordFromAtoB(string1234))
 
 // console.log(findTopStudent(students));
 
-
-
 // function findTopStudents1(studentsInside) {
 // 	const sortedStudents = studentsInside.sort((a, b) => b.grade - a.grade);
 // 	const topGrade = sortedStudents[0].grade;
 // 	const topStudents = sortedStudents.filter(student => student.grade === topGrade);
 // 	return topStudents;
 //   }
-  
+
 //   console.log(findTopStudents1(students));
 
 //#endregion
 
+//#region ⭐⭐⭐⭐⭐
+// let input1 = [[1,3], [2,6], [8,10], [15,18]]; //[[1,6], [8,10], [15,18]]
+// let input2 = [[1,4], [4,5]]; //[1,5]
+// let input3 = [[1,6], [6,8], [8,9], [12,15], [13, 20], [20, 21]];  //[[1, 9],[12, 21]]
+// let input4 = [[1,6], [6,8], [8,9], [9,15], [13, 20], [20, 21]];  //[1, 21]
+// let input5 = [[1,6], [7,8], [8,9], [12,15], [13, 20], [20, 21]];//[[1, 6], [7, 9], [12, 21]]
+// let input6 = [[1,20], [6,7]]
+// let input7 = [ [7,8], [8,9],[1,6],[13, 20],[12,15], [20, 21]];
+// function merge(bigArr){
+// 	if(bigArr.length < 2){
+// 		return bigArr;
+// 	}
 
+// 	const firstResult = [];
+// 	const secondResult = [];
 
-export {sortWordFromAtoB, arrNumToArrOfDivisors, getCommonDigits, takeStrToObj};
+// 	//сортуємо вхідний масив
+// 	const insideArr = [...bigArr]
+// 	const arrAfterSort = insideArr.sort((a,b) => a[0] - b[0])
+
+// 	let item = 0;
+// 	if (arrAfterSort){
+// 		for(let arr = 0; arr < arrAfterSort.length; arr+=1){
+// 			for(let i = 0; i < arrAfterSort[arr].length; i+=1){
+// 				if(arrAfterSort[arr][i] <= item){
+// 					arrAfterSort[arr].shift()
+// 				}
+// 				item = arrAfterSort[arr][i];
+// 			}
+// 			if (arrAfterSort[arr].length === 1){
+// 				arrAfterSort[arr - 1].pop();
+// 				arrAfterSort[arr - 1].splice(1,0, ...arrAfterSort[arr]);
+// 				arrAfterSort[arr].shift()
+// 			}
+// 		}
+// 		for(let i = 0; i < arrAfterSort.length; i+=1){
+// 			if(arrAfterSort[i].length === 1){
+// 				arrAfterSort[i-1].pop();
+// 				arrAfterSort[i - 1].splice(1,0, ...arrAfterSort[i]);
+// 				arrAfterSort[i].shift()
+// 			}
+// 		}
+// 		if(arrAfterSort[1].length === 1){
+// 			const specialArr = [];
+// 			let min = 0;
+// 			let max = 0;
+// 			for(let i = 0; i < arrAfterSort.length; i+=1){
+// 				specialArr.push(...arrAfterSort[i])
+// 			}
+// 			min = Math.min(...specialArr);
+// 			max = Math.max(...specialArr);
+// 			secondResult.push(min);
+// 			secondResult.push(max)
+// 		}
+// 		if(secondResult.length > 0){
+// 			return secondResult
+// 		}else{
+// 			for (const arr of arrAfterSort){
+// 				if(arr.length === 2){
+// 					firstResult.push(arr)
+// 				}
+// 			}
+// 			if (firstResult.length === 1){
+// 				return firstResult.flatMap(item => item)
+// 			}
+// 			return firstResult
+// 		}
+// 	}
+// }
+
+// console.log(merge(input1))
+// console.log(merge(input2))
+// console.log(merge(input3))
+// console.log(merge(input4))
+// console.log(merge(input5))
+// console.log(merge(input6))
+// console.log(merge(input7))
+//#endregion
+
+// #region ⭐⭐⭐ Если предидущее число меньше чем нынишнее нужно добавить разницу в total, если нет, то оставим total без изменений
+// let prices1 = [0,7,1,5,3,6,4];
+// let prices2 = [7,6,4,3,1];
+
+// function maxProfit (prises){
+// let item = 0;
+// let total = 0;
+// for(let i = prises.length - 1; i >= 0; i-=1){
+
+// if(prises[i] < item){
+// 	total += item - prises[i]
+// }
+// item = prises[i]
+// }
+// return total
+// }
+
+// console.log(maxProfit(prices1));
+// console.log(maxProfit(prices2));
+//#endregion
+
+// const moutin = [0,1,0,2,1,0,1,3,2,1,2,1];
+
+// function countingWater(moutins){
+// let total = 0;
+// let item = 0;
+
+// for (let i = 0; i < moutins.length; i+=1){
+// 	if (moutins[i] <= item && moutins[i + 1] >= moutins[i]){
+// 		let min = Math.min(item, moutins[i + 1]);
+// 		total += min
+// 	}
+// 	item = moutins[i]
+// }
+
+// return total
+
+// }
+
+// console.log(countingWater(moutin))
