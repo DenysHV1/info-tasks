@@ -2990,7 +2990,7 @@
 // }
 // console.log(isTryeDate(date));
 
-//#endregion 
+//#endregion
 
 //#region 🧨🧨🧨🧨🧨🧨🧨🧨🧨🧨🧨🧨🧨⭐⭐⭐Сделайте функцию, которая сгенерирует строку заданной длины, заполненную случайными латинскими буквами.
 
@@ -3462,3 +3462,43 @@
 // }
 
 // console.log(countingWater(moutin))
+
+// #region 5.1⭐⭐⭐ Даны два инпута, абзац и кнопка. В инпуты вводятся числа. По нажатию на кнопку выведите в абзац сумму этих чисел.
+const form = document.querySelector(".form-js");
+const result = document.querySelector(".result-js");
+const message = document.querySelector(".message-js");
+
+let storageItem = localStorage.getItem("item");
+storageItem
+  ? (result.textContent = JSON.parse(storageItem))
+  : (result.textContent = 0);
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  const value = e.target.elements.numbers.value;
+  message.textContent = "";
+
+  if (!value) {
+    message.textContent = "Введите данные в форму!";
+    return;
+  }
+
+  const filteredArr = value
+    .split("")
+    .filter((item) => Number(item) || item === "0")
+    .map((item) => Number(item));
+
+  if (!filteredArr.length) {
+    message.textContent = "В вашей строке не было чисел!";
+    localStorage.removeItem("item");
+    result.textContent = 0;
+    return;
+  }
+
+  let resultNum = filteredArr.reduce((acc, item) => acc + item, 0);
+
+  localStorage.setItem("item", JSON.stringify(resultNum));
+  result.textContent = resultNum;
+});
+
+// #endregion
