@@ -3502,3 +3502,31 @@ form.addEventListener("submit", (e) => {
 });
 
 // #endregion
+
+
+// #region 5.2⭐⭐⭐ Дан абзац с числом и кнопка. По нажатию на кнопку возведите текст абзаца в квадрат.
+
+const startNumberEl = document.querySelector('.text-5-2');
+const squareBtn = document.querySelector('.btn-5-2');
+const squareBtnReset = document.querySelector('.btn-5-2-reset');
+const squareInputEl = document.querySelector('.square-num-input');
+
+squareInputEl.addEventListener('input', (e) => {
+  startNumberEl.textContent = e.target.value
+})
+
+squareBtn.addEventListener('click', () => {
+  const value = Number(startNumberEl.textContent);
+  if (!value) return;
+
+  startNumberEl.textContent = Math.pow(value, 2);
+})
+
+squareBtnReset.addEventListener('click', () => {
+  startNumberEl.textContent = 0
+  if(squareInputEl.value){
+    squareInputEl.value = ''
+  }
+})
+
+// #endregion
