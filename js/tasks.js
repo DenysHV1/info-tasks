@@ -3503,30 +3503,63 @@ form.addEventListener("submit", (e) => {
 
 // #endregion
 
-
 // #region 5.2⭐⭐⭐ Дан абзац с числом и кнопка. По нажатию на кнопку возведите текст абзаца в квадрат.
 
-const startNumberEl = document.querySelector('.text-5-2');
-const squareBtn = document.querySelector('.btn-5-2');
-const squareBtnReset = document.querySelector('.btn-5-2-reset');
-const squareInputEl = document.querySelector('.square-num-input');
+const startNumberEl = document.querySelector(".text-5-2");
+const squareBtn = document.querySelector(".btn-5-2");
+const squareBtnReset = document.querySelector(".btn-5-2-reset");
+const squareInputEl = document.querySelector(".square-num-input");
 
-squareInputEl.addEventListener('input', (e) => {
-  startNumberEl.textContent = e.target.value
-})
+squareInputEl.addEventListener("input", (e) => {
+  startNumberEl.textContent = e.target.value;
+});
 
-squareBtn.addEventListener('click', () => {
+squareBtn.addEventListener("click", () => {
   const value = Number(startNumberEl.textContent);
   if (!value) return;
 
   startNumberEl.textContent = Math.pow(value, 2);
-})
+});
 
-squareBtnReset.addEventListener('click', () => {
-  startNumberEl.textContent = 0
-  if(squareInputEl.value){
-    squareInputEl.value = ''
+squareBtnReset.addEventListener("click", () => {
+  startNumberEl.textContent = 0;
+  if (squareInputEl.value) {
+    squareInputEl.value = "";
   }
-})
+});
 
 // #endregion
+
+// #region Даны абзацы с числами. Сделайте так, чтобы по клику на любой абзац его значение возводилось в квадрат.
+
+const sqrtBtn = () => {
+  const btnValue = document.querySelector(".value-btn-5-4");
+  const numberInput = document.querySelector(".numberInput5-4");
+  const message = document.querySelector(".message-5-4-js");
+  message.style.color = "red";
+  let valueMain = 0;
+  numberInput.addEventListener("input", (e) => {
+    let value = e.target.value;
+    if (!value || value.length > 10) {
+      message.textContent = "Error";
+      btnValue.textContent = "1";
+      return;
+    }
+    message.textContent = "";
+    btnValue.textContent = value;
+    valueMain = btnValue.textContent;
+  });
+
+  btnValue.addEventListener("click", () => {
+    let value = Number(btnValue.textContent);
+
+    let newValue = Math.pow(value, 2);
+
+    btnValue.textContent = newValue;
+
+    if (btnValue.textContent === "Infinity") {
+      btnValue.textContent = valueMain;
+    }
+  });
+};
+sqrtBtn();
