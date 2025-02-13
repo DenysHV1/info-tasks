@@ -3938,3 +3938,42 @@ const takeDate = () => {
   });
 };
 takeDate();
+
+//!5-5-1
+const takeDateFromInput = () => {
+  const yearEl = document.querySelector(".year5-5-1");
+  const monthEl = document.querySelector(".month5-5-1");
+  const dayEl = document.querySelector(".day5-5-1");
+  const formEl = document.querySelector(".form5-5-1");
+  const messageEl = document.querySelector('.error5-5-1')
+  const time = new Date();
+
+  formEl.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const value = e.target.elements.date.value.trim();
+    let year = Number(value.slice(0, 4));
+    let month = Number(value.slice(5, 7));
+    let day = Number(value.slice(8, 10));
+
+    if (year > Number(time.getFullYear())){
+      messageEl.textContent = `A year cannot be more than ${time.getFullYear()}`;
+      return;
+    }
+
+    if(month > 12 || month < 1){
+      messageEl.textContent = "Incorrect month value. The value mustn't be more than 12 and less than 1";
+      return;
+    }
+    
+    if(day > 31 || day < 1){
+      messageEl.textContent = "Incorrect day value. The value mustn't be more than 31 and less than 1";
+      return;
+    }
+    messageEl.textContent = ""
+    yearEl.textContent = year
+    monthEl.textContent = month
+    dayEl.textContent = day
+    
+  })
+}
+takeDateFromInput()

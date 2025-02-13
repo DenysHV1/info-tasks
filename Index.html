@@ -200,6 +200,22 @@
       <button class="btn5-4-4">What data today?</button>
     </div>
     <hr />
+    <div style="margin-bottom: 20px" class="5-5-1">
+      <h2>
+        Дан инпут, кнопка и три абзаца. В инпут вводится дата в формате
+        2025-12-31. По нажатию на кнопку выведите в первый абзац год, во второй
+        абзац - месяц, в третий день.
+      </h2>
+      <form class="form5-5-1">
+        <input type="text" name="date" placeholder="ГГГГ-ММ-ДД" pattern="\d{4}-\d{2}-\d{2}">
+        <button type="submit" class="btn5-5-1">Date</button>
+      </form>
+
+      <p>Year: <span class="year5-5-1"></span></p>
+      <p>Month: <span class="month5-5-1"></span></p>
+      <p>Day: <span class="day5-5-1"></span></p>
+      <p class="error5-5-1" style="color: red;"></p>
+    </div>
     <script src="./js/tasks.js" type="module"></script>
     <script src="./js/info.js" type="module"></script>
     <script src="./js/cart.js" type="module"></script>
