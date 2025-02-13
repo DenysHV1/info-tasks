@@ -3563,3 +3563,378 @@ const sqrtBtn = () => {
   });
 };
 sqrtBtn();
+
+//! 5-1-5
+const focusOnInputs = () => {
+  const firstInputEl = document.querySelector(".firstInput5-5");
+  const secondInputEl = document.querySelector(".secondInput5-5");
+  const result = document.querySelector(".result5-5");
+
+  function setValue(e) {
+    let value = Number(e.target.value.trim());
+    result.innerHTML = "";
+    result.textContent = value ? Math.pow(value, 2) : "Field is empty!!!";
+    e.target.value = "";
+  }
+
+  firstInputEl.addEventListener("blur", setValue);
+  secondInputEl.addEventListener("blur", setValue);
+};
+
+focusOnInputs();
+
+//! 5-2-1
+const randomResult = () => {
+  const resuletEl = document.querySelector(".result5-2-1");
+  const btnEl = document.querySelector(".btn-5-2-1");
+
+  btnEl.addEventListener("click", () => {
+    const min = 1;
+    const max = 100;
+
+    const firstNum = Math.ceil(Math.random() * (max - min) + min);
+    const secondNum = Math.ceil(Math.random() * (max - min) + min);
+
+    setTimeout(() => {
+      resuletEl.textContent = `First num - ${firstNum}`;
+    }, 10);
+
+    setTimeout(() => {
+      resuletEl.textContent = `Second num - ${secondNum}`;
+    }, 2010);
+
+    setTimeout(() => {
+      resuletEl.textContent = `${firstNum} + ${secondNum}`;
+    }, 4000);
+
+    setTimeout(() => {
+      resuletEl.textContent = `${firstNum} + ${secondNum} = `;
+    }, 5000);
+
+    setTimeout(() => {
+      resuletEl.textContent = `${firstNum + secondNum}`;
+    }, 6000);
+  });
+};
+randomResult();
+
+//! 5-2-2
+const resultSumOfNumbers = () => {
+  const form = document.querySelector(".form5-2-2");
+  const resultEl = document.querySelector(".result5-2-2");
+
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const innerForm = e.target.elements;
+    const first = Number(innerForm.first.value) || 0;
+    const second = Number(innerForm.second.value) || 0;
+
+    if (first || (first === 0 && second) || second === 0) {
+      resultEl.textContent = first + second;
+    } else {
+      resultEl.textContent = 0;
+    }
+
+    form.reset();
+  });
+};
+resultSumOfNumbers();
+
+//! 5-2-4
+const showLengthInInput = () => {
+  const formEl = document.querySelector(".form5-2-4");
+  const resultEl = document.querySelector(".result5-2-4");
+
+  let prevText = [];
+  let timeInterval = 0;
+
+  function writerText(letter, time = 200) {
+    timeInterval += time;
+    setTimeout(() => {
+      prevText.push(letter);
+      resultEl.textContent = [...prevText].join("");
+    }, timeInterval);
+  }
+
+  formEl.addEventListener("submit", (e) => {
+    e.preventDefault();
+    resultEl.innerHTML = "";
+    const value = e.target.elements.text.value.trim();
+
+    if (!value) return;
+
+    const text = `Your result is ${value.length} sumbols`;
+
+    for (let i = 0; i <= text.length; i += 1) {
+      writerText(text[i]);
+    }
+
+    prevText = [];
+    timeInterval = 0;
+    e.target.reset();
+  });
+};
+showLengthInInput();
+
+//! 5-3-2
+const whatValueIsMore = () => {
+  const firstInputEl = document.querySelector(".firstInput5-3-2");
+  const secondInputEl = document.querySelector(".secondInput5-3-2");
+  const firstTextEl = document.querySelector(".firstText5-3-2");
+  const secondTextEl = document.querySelector(".secondText5-3-2");
+  const resultEl = document.querySelector(".signResult5-3-2");
+  const btn = document.querySelector(".btn5-3-2");
+
+  let value1 = 0;
+  let value2 = 0;
+
+  firstInputEl.addEventListener("input", (e) => {
+    value1 = e.target.value.trim();
+    firstTextEl.textContent = value1 || 0;
+    resultEl.textContent = "";
+    if (value1 > value2) {
+      resultEl.textContent = ">";
+    } else if (value1 < value2) {
+      resultEl.textContent = "<";
+    } else {
+      resultEl.textContent = "=";
+    }
+  });
+
+  secondInputEl.addEventListener("input", (e) => {
+    value2 = e.target.value.trim();
+    secondTextEl.textContent = value2 || 0;
+    resultEl.textContent = "";
+    if (value1 > value2) {
+      resultEl.textContent = ">";
+    } else if (value1 < value2) {
+      resultEl.textContent = "<";
+    } else {
+      resultEl.textContent = "=";
+    }
+  });
+};
+whatValueIsMore();
+
+//! 5-3-3
+const countInputValue = () => {
+  const formEl = document.querySelector(".form5-3-3");
+  const resultEl = document.querySelector(".text5-3-3");
+
+  formEl.addEventListener("submit", (e) => {
+    e.preventDefault();
+    let result = 0;
+    const value = e.target.elements.numbers.value.trim();
+    for (let i = 0; i <= value.length; i++) {
+      result += Number(value[i]);
+    }
+
+    resultEl.textContent = result;
+    e.target.reset();
+  });
+};
+
+countInputValue();
+
+//! 5-3-4
+const turnOverTheText = () => {
+  const formEl = document.querySelector(".form5-3-4");
+  const resultEl = document.querySelector(".text5-3-4");
+
+  formEl.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const value = e.target.elements.el.value.trim();
+    if (!value) return;
+    if (value.length < 2) {
+      alert("Value is too short");
+    }
+    let arr = [];
+    for (let i = 0; i <= value.length; i++) {
+      arr.push(value[i]);
+    }
+    const result = arr.reverse().join("");
+
+    resultEl.textContent = result;
+    e.target.reset();
+  });
+};
+turnOverTheText();
+
+//! 5-3-5
+const fillInTheParagraph = () => {
+  const result1 = document.querySelector(".firstText5-3-5");
+  const result2 = document.querySelector(".secondText5-3-5");
+
+  const count1 = document.querySelector(".countOne5-3-5");
+  const count2 = document.querySelector(".countTwo5-3-5");
+
+  const input = document.querySelector(".input5-3-5");
+  const error = document.querySelector(".error5-3-5");
+
+  const winnerResult = document.querySelector(".winner5-3-5");
+
+  const btn = document.querySelector(".btn5-3-5");
+  let btnState = true;
+  btn.disabled = btnState;
+  let state = true;
+  let arr1 = [];
+  let arr2 = [];
+  let counter1 = 0;
+  let counter2 = 0;
+  let clicks = 0;
+
+  function randomNumbers(arr, value = false) {
+    let number = Math.ceil(Math.random() * (100 - 1) + 1);
+    arr.push(number);
+    return !value ? arr : [];
+  }
+
+  const handleInput = (e) => {
+    const value = Number(e.target.value);
+    if (value > 20 || !value) {
+      error.textContent =
+        "The number of games must be less than 21 and more than 0";
+      btnState = true;
+      btn.disabled = btnState;
+    } else {
+      btnState = false;
+      btn.disabled = btnState;
+      error.textContent = "";
+      clicks = value;
+    }
+  };
+
+  // const handleKeyDownWrapper = (callback) => (event) => {
+  //   if (event.key === "Enter") {
+  //     console.log(event.key);
+  //     callback();
+  //   }
+  // };
+
+  const handleClick = () => {
+    if (state && counter1 < clicks) {
+      winnerResult.textContent = "";
+      state = false;
+      count1.textContent = counter1 += 1;
+      result1.textContent = randomNumbers(arr1)
+        .toSorted((a, b) => a - b)
+        .join(" | ");
+    } else if (!state && counter2 < clicks) {
+      state = true;
+      count2.textContent = counter2 += 1;
+      result2.textContent = randomNumbers(arr2)
+        .toSorted((a, b) => a - b)
+        .join(" | ");
+
+      if (counter2 === clicks) {
+        setTimeout(() => {
+          result1.textContent = randomNumbers(arr1, true);
+          result2.textContent = randomNumbers(arr2, true);
+          counter1 = 0;
+          counter2 = 0;
+          clicks = 0;
+          let maxNum1 = Math.max(...arr1);
+          let maxNum2 = Math.max(...arr2);
+          if (maxNum1 > maxNum2) {
+            winnerResult.textContent = `Player 1 is the winner, the best result is ${maxNum1}`;
+          } else if (maxNum2 > maxNum1) {
+            winnerResult.textContent = `Player 2 is the winner, the best result is ${maxNum2}`;
+          } else {
+            winnerResult.textContent = "Omg this is draw!!!";
+          }
+          arr1 = [];
+          arr2 = [];
+          count1.textContent = counter1;
+          count2.textContent = counter2;
+        }, 1500);
+      }
+    }
+  };
+
+  input.addEventListener("input", handleInput);
+  btn.addEventListener("click", handleClick);
+  // btn.addEventListener("keydown", handleKeyDownWrapper(handleClick));
+};
+fillInTheParagraph();
+
+//! 5-4-1
+const changeText = () => {
+  const first = document.querySelector(".firstText5-4-1");
+  const second = document.querySelector(".secondText5-4-1");
+
+  let originalText1 = first.textContent; // Сохраняем исходный текст
+  let originalText2 = second.textContent;
+
+  first.addEventListener("click", () => {
+    first.textContent =
+      first.textContent === originalText1 ? "!" : originalText1;
+  });
+
+  second.addEventListener("click", () => {
+    second.textContent =
+      second.textContent === originalText2 ? "!" : originalText2;
+  });
+};
+
+changeText();
+
+//! 5-4-2
+const takeLink = () => {
+  const linkEl = document.querySelector(".link5-4-2");
+  const resultEl = document.querySelector(".result5-4-2");
+  const btn = document.querySelector(".btn5-4-2");
+  let state = true;
+
+  btn.addEventListener("click", () => {
+    if (state) {
+      resultEl.textContent = linkEl.href;
+      state = false;
+    } else {
+      resultEl.textContent = "__________________________";
+      state = true;
+    }
+  });
+};
+takeLink();
+
+//!5-4-4
+const takeDate = () => {
+  const yearEl = document.querySelector(".year5-4-4");
+  const monthEl = document.querySelector(".month5-4-4");
+  const dayEl = document.querySelector(".day5-4-4");
+  const btn = document.querySelector(".btn5-4-4");
+  const time = new Date();
+
+  const monthNames = [
+    "Январь",
+    "Февраль",
+    "Март",
+    "Апрель",
+    "Май",
+    "Июнь",
+    "Июль",
+    "Август",
+    "Сентябрь",
+    "Октябрь",
+    "Ноябрь",
+    "Декабрь",
+  ];
+
+  const daysOfWeek = [
+    "Понедельник",
+    "Вторник",
+    "Среда",
+    "Четверг",
+    "Пятница",
+    "Суббота",
+    "Воскресенье",
+  ];
+
+  btn.addEventListener("click", () => {
+    yearEl.textContent = time.getFullYear();
+    monthEl.textContent = monthNames[time.getMonth()];
+    dayEl.textContent = time.getDate();
+    dayEl.textContent = daysOfWeek[time.getDay() - 1];
+  });
+};
+takeDate();
