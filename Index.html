@@ -207,15 +207,152 @@
         абзац - месяц, в третий день.
       </h2>
       <form class="form5-5-1">
-        <input type="text" name="date" placeholder="ГГГГ-ММ-ДД" pattern="\d{4}-\d{2}-\d{2}">
+        <input
+          type="text"
+          name="date"
+          placeholder="ГГГГ-ММ-ДД"
+          pattern="\d{4}-\d{2}-\d{2}"
+        />
         <button type="submit" class="btn5-5-1">Date</button>
       </form>
 
       <p>Year: <span class="year5-5-1"></span></p>
       <p>Month: <span class="month5-5-1"></span></p>
       <p>Day: <span class="day5-5-1"></span></p>
-      <p class="error5-5-1" style="color: red;"></p>
+      <p class="error5-5-1" style="color: red"></p>
     </div>
+    <hr />
+    <div class="5-5-4">
+      <h2>
+        Дан абзац, в котором записано число 1. По нажатию на кнопку увеличивайте
+        число в абзаце на единицу.
+      </h2>
+      <input type="number" class="input5-5-4" />
+      <p class="number5-5-4"></p>
+      <button class="btnAdd5-5-4">add</button>
+      <button class="btnRemove5-5-4">Remove</button>
+      <button class="btnReset5-5-4">Reset</button>
+    </div>
+    <hr />
+    <div class="5-5-5">
+      <h2>
+        Дан инпут и абзац. В инпут вводится строка со словами. По потери фокуса
+        выведите в абзац количество слов во введенной строке.
+      </h2>
+      <input type="text" class="input5-5-5" />
+      <p class="text5-5-5">0</p>
+    </div>
+    <hr />
+    <div class="5-6-1">
+      <h2>
+        Дан инпут, кнопка и абзац. В инпут вводится год. По нажатию на кнопку
+        определите, введен високосный год или нет и выведите информацию об этом
+        в абзац.
+      </h2>
+      <form class="form5-6-1">
+        <input type="number" name="year" />
+        <button>Take info</button>
+      </form>
+      <span class="result5-6-1">-</span>
+    </div>
+    <div class="5-6-4">
+      <h2>
+        Дан див с шириной, высотой и границей, и кнопка. По клику на кнопку
+        увеличьте размеры дива в два раза.
+      </h2>
+      <div
+        class="div5-6-4"
+        style="
+          width: 20px;
+          height: 20px;
+          background-color: green;
+          border: 1px solid black;
+          border-radius: 3px;
+        "
+      ></div>
+      <button class="btn5-6-4">Increase</button>
+      <button class="btnD5-6-4">Decrese</button>
+    </div>
+    <hr />
+    <div class="5-6-5">
+      <h2>
+        Даны ссылки. Сделайте так, чтобы по наведению на любую ссылку над ней
+        появлялось значение ее атрибута href.
+      </h2>
+      <div>
+        <br />
+        <br />
+        <a
+          style="
+            position: relative;
+            padding: 5px;
+            background-color: blueviolet;
+            color: white;
+          "
+          href="https://code.mu/ru/javascript/tasker/stager/5/6/"
+          class="linkFirst5-6-5"
+          >Link 1
+          <span
+            class="linkHover1-5-6-5"
+            style="
+              position: absolute;
+              top: -25px;
+              background-color: rgba(0, 0, 0, 0.153);
+              padding: 3px;
+              border-radius: 3px;
+            "
+          ></span
+        ></a>
+      </div>
+      <br />
+      <br />
+      <br />
+      <div>
+        <a
+          style="
+            position: relative;
+            padding: 5px;
+            background-color: blueviolet;
+            color: white;
+          "
+          href="https://www.youtube.com/"
+          class="linkSecond5-6-5"
+          >Link 2
+          <span
+            class="linkHover2-5-6-5"
+            style="
+              position: absolute;
+              top: -25px;
+              background-color: rgba(0, 0, 0, 0.153);
+              padding: 3px;
+              border-radius: 3px;
+            "
+          ></span
+        ></a>
+      </div>
+    </div>
+    <div class="5-8-2">
+      <h2>
+        Дан массив, кнопка и инпут. Сделайте так, чтобы по клику на кнопку в
+        инпут выводился случайный элемент массива.
+      </h2>
+      <p class="text5-8-2">[2,5,8,90,111,25]</p>
+      <input type="number" class="input5-8-2" />
+      <button class="btn5-8-2">Random from array</button>
+    </div>
+    <div class="5-9-3">
+      <h2>
+        Дан инпут. В него вводится число. Если введено нечетное число, то
+        покрасьте границу инпута в красный цвет, а если четное - то в зеленый.
+      </h2>
+      <input style="outline: none" type="number" class="input5-9-3" />
+    </div>
+    <div class="5-9-5">
+      <h2>Дан пустой список ul и текстареа. В него вводится текст со знаками препинания. По потери фокуса запишите каждое предложение из текста в свой тег li.</h2>
+
+    </div>
+    <ul class="list5-9-5"></ul>
+    <textarea class="texarea5-9-5"></textarea>
     <script src="./js/tasks.js" type="module"></script>
     <script src="./js/info.js" type="module"></script>
     <script src="./js/cart.js" type="module"></script>

@@ -3945,35 +3945,219 @@ const takeDateFromInput = () => {
   const monthEl = document.querySelector(".month5-5-1");
   const dayEl = document.querySelector(".day5-5-1");
   const formEl = document.querySelector(".form5-5-1");
-  const messageEl = document.querySelector('.error5-5-1')
+  const messageEl = document.querySelector(".error5-5-1");
   const time = new Date();
 
-  formEl.addEventListener('submit', (e) => {
+  formEl.addEventListener("submit", (e) => {
     e.preventDefault();
     const value = e.target.elements.date.value.trim();
     let year = Number(value.slice(0, 4));
     let month = Number(value.slice(5, 7));
     let day = Number(value.slice(8, 10));
 
-    if (year > Number(time.getFullYear())){
+    if (year > Number(time.getFullYear())) {
       messageEl.textContent = `A year cannot be more than ${time.getFullYear()}`;
       return;
     }
 
-    if(month > 12 || month < 1){
-      messageEl.textContent = "Incorrect month value. The value mustn't be more than 12 and less than 1";
+    if (month > 12 || month < 1) {
+      messageEl.textContent =
+        "Incorrect month value. The value mustn't be more than 12 and less than 1";
       return;
     }
-    
-    if(day > 31 || day < 1){
-      messageEl.textContent = "Incorrect day value. The value mustn't be more than 31 and less than 1";
+
+    if (day > 31 || day < 1) {
+      messageEl.textContent =
+        "Incorrect day value. The value mustn't be more than 31 and less than 1";
       return;
     }
-    messageEl.textContent = ""
-    yearEl.textContent = year
-    monthEl.textContent = month
-    dayEl.textContent = day
-    
-  })
-}
-takeDateFromInput()
+    messageEl.textContent = "";
+    yearEl.textContent = year;
+    monthEl.textContent = month;
+    dayEl.textContent = day;
+  });
+};
+takeDateFromInput();
+
+//!5-5-4
+const counter = () => {
+  const numberEl = document.querySelector(".number5-5-4");
+  const inputEl = document.querySelector(".input5-5-4");
+  const btnAdd = document.querySelector(".btnAdd5-5-4");
+  const btnRemove = document.querySelector(".btnRemove5-5-4");
+  const btnReset = document.querySelector(".btnReset5-5-4");
+
+  let countValue = 1;
+  let result = 0;
+  numberEl.textContent = result;
+
+  inputEl.addEventListener("input", (e) => {
+    countValue = e.target.value ? Number(e.target.value) : 1;
+  });
+
+  btnAdd.addEventListener("click", () => {
+    numberEl.textContent = result += countValue;
+  });
+  btnRemove.addEventListener("click", () => {
+    numberEl.textContent = result -= countValue;
+  });
+  btnReset.addEventListener("click", () => {
+    numberEl.textContent = 0;
+    countValue = 1;
+    result = 0;
+    inputEl.value = "";
+  });
+};
+counter();
+
+//!5-5-5
+
+const counterWordsInInput = () => {
+  const numberEl = document.querySelector(".text5-5-5");
+  const inputEl = document.querySelector(".input5-5-5");
+
+  inputEl.addEventListener("blur", (e) => {
+    const arr = e.target.value.trim().split(" ");
+    numberEl.textContent = arr.length;
+  });
+};
+counterWordsInInput();
+
+//! 5-6-1
+const infoAboutYear = () => {
+  const yearFormEl = document.querySelector(".form5-6-1");
+  const resultEl = document.querySelector(".result5-6-1");
+
+  yearFormEl.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const year = e.target.elements.year.value.trim();
+    const resultText =
+      year % 4 === 0 && (year % 100 !== 0 || year % 400 === 0)
+        ? "- Високосный год — это год, в котором 366 дней(29 февраля — добавляется)"
+        : "- Не високосный год - это год, в котором 365 дней";
+
+    if (year > 0) {
+      resultEl.textContent = resultText;
+    }
+  });
+};
+infoAboutYear();
+
+//! 5-6-4
+const changeSizeDiv = () => {
+  const divEl = document.querySelector(".div5-6-4");
+  const increseEl = document.querySelector(".btn5-6-4");
+  const decreseEl = document.querySelector(".btnD5-6-4");
+  let width = 20;
+  let height = 20;
+  increseEl.addEventListener("click", () => {
+    width = width * 2;
+    height = height * 2;
+    divEl.style.width = `${width}px`;
+    divEl.style.height = `${height}px`;
+  });
+
+  decreseEl.addEventListener("click", () => {
+    if (width > 0 && height > 0) {
+      width = width / 2;
+      height = height / 2;
+    }
+
+    divEl.style.width = `${width}px`;
+    divEl.style.height = `${height}px`;
+  });
+};
+changeSizeDiv();
+
+//! 5-6-5
+const onLinkHover = () => {
+  const link1 = document.querySelector(".linkFirst5-6-5");
+  const link2 = document.querySelector(".linkSecond5-6-5");
+  const hoverEl1 = document.querySelector(".linkHover1-5-6-5");
+  const hoverEl2 = document.querySelector(".linkHover2-5-6-5");
+
+  hoverEl1.style.display = "none";
+  hoverEl2.style.display = "none";
+  hoverEl1.textContent = link1.href;
+  hoverEl2.textContent = link2.href;
+
+  link1.addEventListener("mouseover", () => {
+    hoverEl1.style.display = "flex";
+  });
+  link1.addEventListener("mouseout", () => {
+    hoverEl1.style.display = "none";
+  });
+
+  link2.addEventListener("mouseover", () => {
+    hoverEl2.style.display = "flex";
+  });
+  link2.addEventListener("mouseout", () => {
+    hoverEl2.style.display = "none";
+  });
+};
+onLinkHover();
+
+const randomFromArray = () => {
+  const btnEl = document.querySelector(".btn5-8-2");
+  const inputEl = document.querySelector(".input5-8-2");
+  const arrEl = document.querySelector(".text5-8-2");
+
+  const arr = JSON.parse(arrEl.textContent);
+  console.log(arr);
+
+  btnEl.addEventListener("click", () => {
+    const idx = Math.floor(Math.random() * (arr.length - 1) + 1);
+    inputEl.value = arr[idx];
+  });
+};
+
+randomFromArray();
+
+const changeBorderOnInput = () => {
+  const inputEl = document.querySelector(".input5-9-3");
+  inputEl.style.border = "2px solid #000000";
+  inputEl.addEventListener("input", (e) => {
+    const { value } = e.target;
+    if (Number(value % 2 === 0)) {
+      inputEl.style.border = "2px solid green";
+      return;
+    } else if (Number(value % 2 !== 0)) {
+      inputEl.style.border = "2px solid red";
+      return;
+    }
+
+    inputEl.style.border = "2px solid #000000";
+  });
+};
+changeBorderOnInput();
+
+const makerSentences = () => {
+  const listEl = document.querySelector(".list5-9-5");
+  const textareaEl = document.querySelector(".texarea5-9-5");
+
+  textareaEl.addEventListener("blur", (e) => {
+    listEl.innerHTML = "";
+
+    const { value } = e.target;
+    const arrValue = value.split(".").map((item) => item.trim()).filter((item) => item.length > 0);
+
+    // Фильтрация коротких предложений
+    const filteredArr = [];
+    let tempSentence = "";
+
+    arrValue.forEach((sentence) => {
+      if (sentence.length < 3) {
+        tempSentence += sentence + ". ";
+      } else {
+        filteredArr.push(tempSentence + sentence + ".");
+        tempSentence = "";
+      }
+    });
+
+    const setMarkup = (arr) => arr.map((item) => `<li>${item}</li>`).join("");
+
+    listEl.insertAdjacentHTML("beforeend", setMarkup(filteredArr));
+  });
+};
+
+makerSentences();
