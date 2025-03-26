@@ -4103,7 +4103,6 @@ const randomFromArray = () => {
   const arrEl = document.querySelector(".text5-8-2");
 
   const arr = JSON.parse(arrEl.textContent);
-  console.log(arr);
 
   btnEl.addEventListener("click", () => {
     const idx = Math.floor(Math.random() * (arr.length - 1) + 1);
@@ -4139,7 +4138,10 @@ const makerSentences = () => {
     listEl.innerHTML = "";
 
     const { value } = e.target;
-    const arrValue = value.split(".").map((item) => item.trim()).filter((item) => item.length > 0);
+    const arrValue = value
+      .split(".")
+      .map((item) => item.trim())
+      .filter((item) => item.length > 0);
 
     // Фильтрация коротких предложений
     const filteredArr = [];
@@ -4161,3 +4163,102 @@ const makerSentences = () => {
 };
 
 makerSentences();
+
+const fiber = {
+  fiber: {
+    tag: "FunctionComponent", // тип компонента
+    stateNode: {
+      // это сам компонент (функциональный компонент, к примеру)
+      render: function Counter() {}, // сам компонент, который рендерится
+    },
+    return: null, // родительский Fiber (для корневых компонентов, это null)
+    memoizedProps: {
+      // пропсы компонента
+    },
+    memoizedState: [
+      {
+        index: 0, // индекс хука useState
+        currentState: 0, // текущее состояние, начальное (0)
+        updateQueue: [
+          {
+            action: 0, // обновление состояния (например, при вызове setCount(0))
+            hasForceUpdate: false,
+            isReplace: false,
+          },
+        ],
+      },
+    ],
+    updateQueue: {
+      lastRenderedState: 0, // последнее отрендеренное состояние
+      shared: {
+        pending: null, // отложенные обновления
+      },
+    },
+    effectTag: 0, // тип эффекта (например, перерендер)
+    child: null, // дочерний Fiber
+    sibling: null, // соседний Fiber
+    nextEffect: null, // следующий эффект, который должен быть выполнен
+  },
+};
+
+const input = [
+  { value: "abcd", order: 4, expired: false },
+  { value: "qewr", order: 2, expired: true },
+  { value: "xyz1", order: 1, expired: false },
+  { value: "abx2", order: 3, expired: false },
+];
+
+const spesialFilter = (arr) => {
+  return arr
+    .filter(({ expired }) => !expired)
+    .toSorted((a, b) => a.order - b.order)
+    .reduce((acc, item) => acc + item.value, "")
+    .split("")
+    .reduce((acc, item) => {
+      if (!acc.includes(item)) acc.push(item);
+      return acc;
+    }, [])
+    .join("");
+};
+spesialFilter(input)
+
+const changeInputColor = () => {
+  const input = document.querySelector(".input5-10-1");
+  input.style.border = "3px solid black"
+
+  input.addEventListener("input", (e) => {
+    const { value } = e.target;
+
+    if (Number(value) % 2 === 0) {
+      input.style.borderColor = "green";
+      input.style.outline = "green";
+    } else {
+      input.style.borderColor = "red";
+      input.style.outline = "red";
+    }
+  });
+};
+
+changeInputColor();
+
+
+const howManyDaysToNewYear = () => {
+  const btn = document.querySelector('.button5-10-2');
+  const text = document.querySelector(".text5-10-2");
+
+  if (!text.textContent) {
+    btn.addEventListener('click', () => {
+      const today = new Date();
+      const nextYear = today.getFullYear() + 1;
+      const newYearDate = new Date(nextYear, 0, 1);
+
+      const diffInMs = newYearDate - today;
+
+      const daysLeft = Math.ceil(diffInMs / (1000 * 60 * 60 * 24));
+
+      text.textContent = `До Нового года осталось ${daysLeft} дней!`;
+    });
+  }
+};
+
+howManyDaysToNewYear();
