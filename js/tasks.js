@@ -4220,11 +4220,11 @@ const spesialFilter = (arr) => {
     }, [])
     .join("");
 };
-spesialFilter(input)
+spesialFilter(input);
 
 const changeInputColor = () => {
   const input = document.querySelector(".input5-10-1");
-  input.style.border = "3px solid black"
+  input.style.border = "3px solid black";
 
   input.addEventListener("input", (e) => {
     const { value } = e.target;
@@ -4241,13 +4241,12 @@ const changeInputColor = () => {
 
 changeInputColor();
 
-
 const howManyDaysToNewYear = () => {
-  const btn = document.querySelector('.button5-10-2');
+  const btn = document.querySelector(".button5-10-2");
   const text = document.querySelector(".text5-10-2");
 
   if (!text.textContent) {
-    btn.addEventListener('click', () => {
+    btn.addEventListener("click", () => {
       const today = new Date();
       const nextYear = today.getFullYear() + 1;
       const newYearDate = new Date(nextYear, 0, 1);
@@ -4262,3 +4261,68 @@ const howManyDaysToNewYear = () => {
 };
 
 howManyDaysToNewYear();
+
+const randomTextColor = () => {
+  const colors = [
+    "#2b00ff",
+    "#18cd48",
+    "red",
+    "#1de1fb",
+    "#ff00d9",
+    "#007804",
+    "#007bff",
+    "#6f00ff",
+    "#bfff00",
+    "#7e6ccd",
+    "#ffcc00",
+    "#ff0000",
+    "#743b75",
+    "#901a49",
+  ];
+  const text = document.querySelector(".text5-10-3");
+
+  function randomColor(colorsArr) {
+    const length = colorsArr.length - 1;
+    const random = Math.ceil(Math.random() * (length - 1) + 1);
+    return random;
+  }
+
+  text.addEventListener("click", () => {
+    text.style.color = colors[randomColor(colors)];
+  });
+};
+
+randomTextColor();
+
+const onlyEvenNumbers = () => {
+  const input = document.querySelector(".input5-10-4");
+  const btn = document.querySelector(".btn5-10-4");
+  const text = document.querySelector(".text5-10-4");
+
+  const arr = JSON.parse(text.textContent);
+  const filtredArr = arr.filter((item) => item % 2 === 0);
+  let count = 0;
+  let count2 = 0;
+
+  btn.addEventListener("click", () => {
+    if (count2) {
+      input.value = "";
+      count2 = 0
+      return
+    }
+
+    if (count === filtredArr.length - 1) {
+      input.value = input.value + filtredArr[count];
+      count = 0;
+      count2 += 1
+      return;
+    }
+
+    if (count <= arr.length && count !== filtredArr.length - 1) {
+      input.value = input.value + filtredArr[count] + ", ";
+      count += 1;
+    }
+  });
+};
+
+onlyEvenNumbers();
