@@ -4307,14 +4307,14 @@ const onlyEvenNumbers = () => {
   btn.addEventListener("click", () => {
     if (count2) {
       input.value = "";
-      count2 = 0
-      return
+      count2 = 0;
+      return;
     }
 
     if (count === filtredArr.length - 1) {
       input.value = input.value + filtredArr[count];
       count = 0;
-      count2 += 1
+      count2 += 1;
       return;
     }
 
@@ -4326,3 +4326,82 @@ const onlyEvenNumbers = () => {
 };
 
 onlyEvenNumbers();
+
+const getPastAndFutureYears = () => {
+  const btn = document.querySelector(".btn5-10-6");
+  const list = document.querySelector(".list5-10-6");
+
+  const createList = () => {
+    const currentYear = new Date().getFullYear();
+    const pastDate = currentYear - 100;
+    const yearsArr = [];
+
+    for (let i = pastDate; i <= currentYear + 100; i += 1) {
+      yearsArr.push(i);
+    }
+
+    return yearsArr.map((item) => `<li>${item}</li>`).join("");
+  };
+
+  createList();
+
+  btn.addEventListener("click", () => {
+    list.insertAdjacentHTML("beforeend", createList());
+  });
+};
+
+getPastAndFutureYears();
+
+const getDataFromArr = () => {
+  const btn = document.querySelector(".btn6-1-1");
+  const list = document.querySelector(".list6-1-1");
+
+  const colors = [
+    "#2b00ff",
+    "#18cd48",
+    "red",
+    "#1de1fb",
+    "#ff00d9",
+    "#007804",
+    "#007bff",
+    "#6f00ff",
+    "#bfff00",
+    "#7e6ccd",
+    "#ffcc00",
+    "#ff0000",
+    "#743b75",
+    "#901a49",
+  ];
+
+  const createList = () => {
+    return colors
+      .map((item) => `<li style="color: ${item}">${item}</li>`)
+      .join("");
+  };
+
+  btn.addEventListener("click", () => {
+    list.insertAdjacentHTML("beforebegin", createList());
+  });
+};
+
+getDataFromArr();
+
+const getNumberFromArr = () => {
+  const btn = document.querySelector(".btn6-1-2");
+  const list = document.querySelector(".list6-1-2");
+  let string = "";
+
+  const createList = () => {
+    for (let i = 0; i <= 10; i += 1) {
+      string = string + `<li>${i}</li>`;
+    }
+
+    return string;
+  };
+
+  btn.addEventListener("click", () => {
+    list.insertAdjacentHTML("beforeend", createList())
+  })
+};
+
+getNumberFromArr();
