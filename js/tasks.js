@@ -62,6 +62,7 @@
 // const x1 = 20;
 // const x2 = 100;
 
+
 // let number = prompt("Введите число а мы сравним его с данными");
 // number = Number.parseFloat(number);
 // number = number.toFixed(3);
