@@ -4402,7 +4402,7 @@ const getNumberFromArr = () => {
   btn.addEventListener("click", () => {
     list.insertAdjacentHTML("beforeend", createList())
   })
-  
+  const fff = 1
 };
 
 getNumberFromArr();
