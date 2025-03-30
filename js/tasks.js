@@ -62,7 +62,6 @@
 // const x1 = 20;
 // const x2 = 100;
 
-
 // let number = prompt("Введите число а мы сравним его с данными");
 // number = Number.parseFloat(number);
 // number = number.toFixed(3);
@@ -4401,8 +4400,23 @@ const getNumberFromArr = () => {
   };
 
   btn.addEventListener("click", () => {
-    list.insertAdjacentHTML("beforeend", createList())
-  })
+    list.insertAdjacentHTML("beforeend", createList());
+  });
 };
 
 getNumberFromArr();
+
+const deleteLastListChild = () => {
+  const btn = document.querySelector(".btn6-1-5");
+  const list = document.querySelector(".list6-1-5");
+
+  btn.addEventListener("click", () => {
+    const children = list.children;
+
+    if (children.length > 0) {
+      list.removeChild(children[children.length - 1]);
+    }
+  });
+};
+
+deleteLastListChild();
